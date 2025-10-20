@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="scripts/styles.css">
+</head>
+
+<body>
+	<h1>Budget Categories</h1>
+
+	<div id="menu">
+		<button onclick="showCategory('groceries')">Groceries</button>
+		<button onclick="showCategory('eating-out')">Eating Out</button>
+		<button onclick="showCategory('gas')">Gas</button>
+		<button onclick="showCategory('necessities')">Necessities</button>
+		<button onclick="showCategory('pleasure')">Pleasure</button>
+		<button onclick="showCategory('saving')">Saving</button>
+		<button onclick="showCategory('giving')">Giving</button>
+	</div>
+	<div id="category-display">
+		<!-- Category info will be shown here -->
+		<form id="add-amount-form" onsubmit="return addAmountToCategory();">
+			<input type="number" id="amount-input" step="0.01" min="0" placeholder="Enter amount" required>
+			<button type="submit">Add Amount</button>
+		</form>
+	</div>
+	<script src="scripts/main.js"></script>
+</body>
+
+</html>
