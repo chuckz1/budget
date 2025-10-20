@@ -1,0 +1,64 @@
+#menu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-bottom: 20px;
+	justify-content: center;
+}
+
+#menu button {
+	font-size: 1.2em;
+	padding: 16px 28px;
+	border-radius: 8px;
+	border: none;
+	background: #1976d2;
+	color: #fff;
+	cursor: pointer;
+	margin: 4px 0;
+	transition: background 0.2s;
+}
+
+#menu button:hover,
+#menu button:focus {
+	background: #1565c0;
+}
+
+/* Improve input and form appearance */
+#category-display form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	margin-top: 18px;
+}
+
+#amount-input {
+	font-size: 1.1em;
+	padding: 12px 16px;
+	border-radius: 6px;
+	border: 1px solid #bbb;
+	width: 180px;
+	box-sizing: border-box;
+	outline: none;
+	transition: border 0.2s;
+}
+
+#amount-input:focus {
+	border: 1.5px solid #1976d2;
+}
+
+#add-amount-form button[type="submit"] {
+	font-size: 1.1em;
+	padding: 12px 24px;
+	border-radius: 6px;
+	border: none;
+	background: #388e3c;
+	color: #fff;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+#add-amount-form button[type="submit"]:hover,
+#add-amount-form button[type="submit"]:focus {
+	background: #2e7031;
+}

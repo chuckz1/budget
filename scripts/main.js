@@ -13,17 +13,15 @@ let currentCategory = "groceries";
 function showCategory(key) {
 	currentCategory = key;
 	const cat = categories[key];
-	const display = document.getElementById("category-display");
-	if (cat && display) {
-		display.innerHTML = `
-			<h2>${cat.name}</h2>
-			<p>Amount: $${cat.amount.toFixed(2)}</p>
-			<form id="add-amount-form" onsubmit="return addAmountToCategory();">
-				<input type="number" id="amount-input" step="0.01" min="0" placeholder="Enter amount" required>
-				<button type="submit">Add Amount</button>
-			</form>
-		`;
+	const nameElem = document.getElementById("category-name");
+	const amountElem = document.getElementById("category-amount");
+	if (cat && nameElem && amountElem) {
+		nameElem.textContent = cat.name;
+		amountElem.textContent = cat.amount.toFixed(2);
 	}
+	// Clear input after switching
+	const input = document.getElementById("amount-input");
+	if (input) input.value = "";
 }
 
 function addAmountToCategory() {
@@ -31,7 +29,12 @@ function addAmountToCategory() {
 	const value = parseFloat(input.value);
 	if (!isNaN(value) && value > 0) {
 		categories[currentCategory].amount += value;
-		showCategory(currentCategory);
+		// Only update the amount span
+		const amountElem = document.getElementById("category-amount");
+		if (amountElem) {
+			amountElem.textContent = categories[currentCategory].amount.toFixed(2);
+		}
+		input.value = "";
 	}
 	return false; // Prevent form submission
 }

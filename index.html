@@ -20,14 +20,22 @@
 		<button onclick="showCategory('saving')">Saving</button>
 		<button onclick="showCategory('giving')">Giving</button>
 	</div>
+
 	<div id="category-display">
-		<!-- Category info will be shown here -->
+		<h2 id="category-name"></h2>
+		<p>Amount: $<span id="category-amount"></span></p>
 		<form id="add-amount-form" onsubmit="return addAmountToCategory();">
-			<input type="number" id="amount-input" step="0.01" min="0" placeholder="Enter amount" required>
-			<button type="submit">Add Amount</button>
+			<input type="number" id="amount-input" step="0.01" min="0" placeholder="Enter expense" required>
+			<button type="submit">Add Expense</button>
 		</form>
 	</div>
+
+	<form id="uploadForm">
+		<input type="file" id="fileInput" />
+		<button type="submit">Upload</button>
+	</form>
 	<script src="scripts/main.js"></script>
+	<script src="scripts/upload.js"></script>
 </body>
 
 </html>
