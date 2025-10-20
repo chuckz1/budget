@@ -16,7 +16,7 @@ document.getElementById("uploadForm").onsubmit = async (e) => {
 		const base64 = reader.result.split(",")[1];
 
 		const res = await fetch(
-			"https://script.google.com/macros/s/AKfycbxYZ8UImeiZsb6n_dTzeDXWNuAcBlrXWylmf-tR58CbJBi5FOfJVTwFXcJMxohzfzls/exec",
+			"https://script.google.com/macros/s/AKfycbw5pNNLJq-WrygpY4g5YltK8lzmncCJr6qozwA9kQ8/dev",
 			{
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
